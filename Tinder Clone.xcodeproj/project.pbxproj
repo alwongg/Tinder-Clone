@@ -13,6 +13,8 @@
 		FA847A4A1F462D50002302AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA847A481F462D50002302AB /* Main.storyboard */; };
 		FA847A4C1F462D50002302AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA847A4B1F462D50002302AB /* Assets.xcassets */; };
 		FA847A4F1F462D50002302AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA847A4D1F462D50002302AB /* LaunchScreen.storyboard */; };
+		FA847A571F465415002302AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA847A561F465415002302AB /* LoginViewController.swift */; };
+		FA847A5C1F46564D002302AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA847A501F462D50002302AB /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		FA847A4B1F462D50002302AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA847A4E1F462D50002302AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA847A501F462D50002302AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA847A561F465415002302AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,14 +81,47 @@
 		FA847A431F462D50002302AB /* Tinder Clone */ = {
 			isa = PBXGroup;
 			children = (
-				FA847A441F462D50002302AB /* AppDelegate.swift */,
+				FA847A5A1F465434002302AB /* Model */,
+				FA847A591F465431002302AB /* View */,
+				FA847A581F465427002302AB /* Controller */,
+				FA847A5B1F46543C002302AB /* Supporting Files */,
+			);
+			path = "Tinder Clone";
+			sourceTree = "<group>";
+		};
+		FA847A581F465427002302AB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA847A561F465415002302AB /* LoginViewController.swift */,
 				FA847A461F462D50002302AB /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA847A591F465431002302AB /* View */ = {
+			isa = PBXGroup;
+			children = (
 				FA847A481F462D50002302AB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA847A5A1F465434002302AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA847A5B1F46543C002302AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA847A441F462D50002302AB /* AppDelegate.swift */,
 				FA847A4B1F462D50002302AB /* Assets.xcassets */,
 				FA847A4D1F462D50002302AB /* LaunchScreen.storyboard */,
 				FA847A501F462D50002302AB /* Info.plist */,
 			);
-			path = "Tinder Clone";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA847A5C1F46564D002302AB /* Info.plist in Resources */,
 				FA847A4F1F462D50002302AB /* LaunchScreen.storyboard in Resources */,
 				FA847A4C1F462D50002302AB /* Assets.xcassets in Resources */,
 				FA847A4A1F462D50002302AB /* Main.storyboard in Resources */,
@@ -210,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA847A571F465415002302AB /* LoginViewController.swift in Sources */,
 				FA847A471F462D50002302AB /* ViewController.swift in Sources */,
 				FA847A451F462D50002302AB /* AppDelegate.swift in Sources */,
 			);
@@ -349,7 +387,7 @@
 			baseConfigurationReference = DBC07BD6D93985B1735A1857 /* Pods-Tinder Clone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Tinder Clone/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tinder Clone/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alwongg.Tinder-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,7 +401,7 @@
 			baseConfigurationReference = 90CD2BCCCD5C1CD75707D475 /* Pods-Tinder Clone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Tinder Clone/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Tinder Clone/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alwongg.Tinder-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
