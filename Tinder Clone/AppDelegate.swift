@@ -23,12 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let config = ParseClientConfiguration { (theConfig) in
         
             theConfig.applicationId = "tinderalwonggid"
-            theConfig.server = "http://yourappname.herokuapp.com/parse"
+            theConfig.server = "http://whispering-badlands-50009.herokuapp.com/parse"
             theConfig.clientKey = "tinderalwonggmaster"
         }
         
         Parse.initialize(with: config)
         
+        // parse-dashboard --appId tinderalwonggid --masterKey tinderalwonggmaster --serverURL "http://whispering-badlands-50009.herokuapp.com/parse"
         
         return true
     }
