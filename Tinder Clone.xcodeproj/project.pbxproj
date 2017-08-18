@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		60FD97E97BC8EFA5D2A33BDA /* Pods_Tinder_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E80C48B5257B97162AB5C6D /* Pods_Tinder_Clone.framework */; };
+		FA13F3A01F46B93400886921 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13F39F1F46B93400886921 /* MatchesViewController.swift */; };
+		FA13F3A21F46BCD300886921 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13F3A11F46BCD300886921 /* MatchTableViewCell.swift */; };
 		FA847A451F462D50002302AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA847A441F462D50002302AB /* AppDelegate.swift */; };
 		FA847A471F462D50002302AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA847A461F462D50002302AB /* ViewController.swift */; };
 		FA847A4A1F462D50002302AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA847A481F462D50002302AB /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 		2E80C48B5257B97162AB5C6D /* Pods_Tinder_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90CD2BCCCD5C1CD75707D475 /* Pods-Tinder Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder Clone.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tinder Clone/Pods-Tinder Clone.release.xcconfig"; sourceTree = "<group>"; };
 		DBC07BD6D93985B1735A1857 /* Pods-Tinder Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder Clone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tinder Clone/Pods-Tinder Clone.debug.xcconfig"; sourceTree = "<group>"; };
+		FA13F39F1F46B93400886921 /* MatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
+		FA13F3A11F46BCD300886921 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		FA847A411F462D50002302AB /* Tinder Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA847A441F462D50002302AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA847A461F462D50002302AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 				FA847A561F465415002302AB /* LoginViewController.swift */,
 				FA847A461F462D50002302AB /* ViewController.swift */,
 				FA847A5D1F468FCA002302AB /* UpdateViewController.swift */,
+				FA13F39F1F46B93400886921 /* MatchesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				FA847A481F462D50002302AB /* Main.storyboard */,
+				FA13F3A11F46BCD300886921 /* MatchTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,7 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA847A571F465415002302AB /* LoginViewController.swift in Sources */,
+				FA13F3A21F46BCD300886921 /* MatchTableViewCell.swift in Sources */,
 				FA847A471F462D50002302AB /* ViewController.swift in Sources */,
+				FA13F3A01F46B93400886921 /* MatchesViewController.swift in Sources */,
 				FA847A451F462D50002302AB /* AppDelegate.swift in Sources */,
 				FA847A5E1F468FCB002302AB /* UpdateViewController.swift in Sources */,
 			);

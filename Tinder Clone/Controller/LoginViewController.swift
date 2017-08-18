@@ -142,6 +142,8 @@ class LoginViewController: UIViewController {
         
     }
     
+    // MARK: - IBActions
+    
     @IBAction func changeLogInSignUpTapped(_ sender: Any) {
         
         if signUpMode {

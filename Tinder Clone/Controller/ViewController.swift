@@ -11,10 +11,15 @@ import Parse
 
 class ViewController: UIViewController {
     
+    // MARK: - Properties
+    
     var displayUserID = ""
+    
+    // MARK: - IBOutlets
     
     @IBOutlet weak var matchImageView: UIImageView!
     
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +29,21 @@ class ViewController: UIViewController {
         matchImageView.addGestureRecognizer(gesture)
         
         updateImage()
+        
+        // Used to detect location so you get matched with local users
+        
+        PFGeoPoint.geoPointForCurrentLocation { (geoPoint, error) in
+            if let point = geoPoint {
+                
+                PFUser.current()?["location"] = point
+                
+                PFUser.current()?.saveInBackground()
+ 
+            }
+        }
     }
+    
+    // MARK: - Drag method
     
     @objc func wasDragged(gestureRecognizer: UIPanGestureRecognizer){
         
@@ -97,6 +116,8 @@ class ViewController: UIViewController {
         
     }
     
+    // MARK: - Update image
+    
     func updateImage(){
         
         if let query = PFUser.query(){
@@ -129,7 +150,16 @@ class ViewController: UIViewController {
             
             query.whereKey("objectId", notContainedIn: ignoredUsers)
             
+            //check location
             
+            if let geoPoint = PFUser.current()?["location"] as? PFGeoPoint {
+                
+                
+                
+                query.whereKey("location", withinGeoBoxFromSouthwest: PFGeoPoint(latitude: geoPoint.latitude - 1, longitude: geoPoint.longitude - 1), toNortheast: PFGeoPoint(latitude: geoPoint.latitude + 1, longitude: geoPoint.longitude + 1))
+                
+                
+            }
             
             query.limit = 1
             
@@ -163,18 +193,10 @@ class ViewController: UIViewController {
                 
             }
         }
-        
-        
-        
-        
-        
+   
     }
-    
-    
-    
-    
-    
-    
+
+    // MARK: - IBActions
     
     @IBAction func logoutTapped(_ sender: Any) {
         PFUser.logOut()
