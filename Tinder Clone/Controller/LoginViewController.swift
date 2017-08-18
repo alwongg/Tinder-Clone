@@ -32,6 +32,21 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         errorLabel.isHidden = true
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if PFUser.current() != nil {
+            
+            if PFUser.current()?["isFemale"] != nil {
+                
+                 self.performSegue(withIdentifier: "loginToSwipeSegue", sender: nil)
+            } else {
+            
+           
+            
+            self.performSegue(withIdentifier: "updateSegue", sender: nil)
+            }
+        }
+    }
 
     // MARK: - IBActions
     
@@ -67,7 +82,7 @@ class LoginViewController: UIViewController {
                     
                     print("Sign up successful")
                     
-                    
+                    self.performSegue(withIdentifier: "updateSegue", sender: nil)
                 }
             })
             
@@ -101,6 +116,17 @@ class LoginViewController: UIViewController {
                             
                             print("Login successful")
                             
+                            if user?["isFemale"] != nil {
+                                
+                                self.performSegue(withIdentifier: "loginToSwipeSegue", sender: nil)
+                            } else {
+                                
+                                
+                                
+                                self.performSegue(withIdentifier: "updateSegue", sender: nil)
+                            }
+                            
+                        
                             
                         }
                     })

@@ -15,6 +15,7 @@
 		FA847A4F1F462D50002302AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA847A4D1F462D50002302AB /* LaunchScreen.storyboard */; };
 		FA847A571F465415002302AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA847A561F465415002302AB /* LoginViewController.swift */; };
 		FA847A5C1F46564D002302AB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA847A501F462D50002302AB /* Info.plist */; };
+		FA847A5E1F468FCB002302AB /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA847A5D1F468FCA002302AB /* UpdateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		FA847A4E1F462D50002302AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA847A501F462D50002302AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA847A561F465415002302AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA847A5D1F468FCA002302AB /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				FA847A561F465415002302AB /* LoginViewController.swift */,
 				FA847A461F462D50002302AB /* ViewController.swift */,
+				FA847A5D1F468FCA002302AB /* UpdateViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				FA847A571F465415002302AB /* LoginViewController.swift in Sources */,
 				FA847A471F462D50002302AB /* ViewController.swift in Sources */,
 				FA847A451F462D50002302AB /* AppDelegate.swift in Sources */,
+				FA847A5E1F468FCB002302AB /* UpdateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
